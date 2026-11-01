@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
+/*
+ * Story Atelier — calming pastel theme (soft purples + soft greens).
+ * Interface & headings → Agbalumo (--font-brunette).
+ * Story content        → Times New Roman (.font-story), never mixed in.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: #fdfbff;      /* lavender-white canvas */
+  --ink: #3f3d56;         /* soft ink */
+  --ink-dim: #7a7691;
+  --mist: #ede9f5;        /* tinted borders */
+
+  /* soft purples */
+  --lilac: #8b5cf6;
+  --lilac-deep: #7c4cd9;
+  --lilac-soft: #efe6fb;
+  --lilac-mist: #f7f3fc;
+
+  /* soft greens */
+  --sage: #48bb78;
+  --sage-soft: #e3f5e9;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canvas: var(--canvas);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-mist: var(--mist);
+  --color-lilac: var(--lilac);
+  --color-lilac-deep: var(--lilac-deep);
+  --color-lilac-soft: var(--lilac-soft);
+  --color-lilac-mist: var(--lilac-mist);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --font-sans: var(--font-brunette), "Segoe UI", "Helvetica Neue", system-ui,
+    sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  /* Increased for readability — scales every rem-based Tailwind size up. */
+  font-size: 20px;
+  line-height: 1.65;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-brunette), "Segoe UI", system-ui, sans-serif;
+  /* Agbalumo ships a single weight — prevent smeared faux-bold rendering.
+     Real bold faces (e.g. Times New Roman Bold in the writing area) still apply.
+     Shorthand "style" = italic synthesis allowed, weight synthesis disabled
+     (the longhand is stripped by the CSS minifier). */
+  font-synthesis: style;
+}
+
+/* Manuscript / story content is strictly Times New Roman. */
+.font-story {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* TipTap editor chrome */
+.ProseMirror {
+  outline: none;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: var(--ink-dim);
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+/* Terrain-area selection feedback: brief glow/brighten for 2s, then settle. */
+@keyframes fill-glow {
+  0% {
+    filter: brightness(1.35) drop-shadow(0 0 0 rgba(139, 92, 246, 0.9));
+  }
+  50% {
+    filter: brightness(1.6) drop-shadow(0 0 10px rgba(139, 92, 246, 0.9));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 0 rgba(139, 92, 246, 0));
+  }
+}
+
+.fill-flash {
+  animation: fill-glow 2s ease-out forwards;
+}
+
+/* Homepage quote carousel — gentle fade/slide on each cycle */
+@keyframes quote-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-fade {
+  animation: quote-fade 0.6s ease-out both;
 }
