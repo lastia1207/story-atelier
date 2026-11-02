@@ -22,7 +22,7 @@ function snippet(s: Story): string {
   const text =
     plainTextFromContent(s.content) ||
     s.chapters.map((c) => plainTextFromContent(c.content)).join(" ").trim();
-  return text ? `${text.slice(0, 140)}…` : "No summary yet. Click to start writing.";
+  return text ? `${text.slice(0, 140)}…` : "";
 }
 
 function ViewTab({
@@ -111,10 +111,12 @@ export default function Home() {
                   href={`/workspace/${s.id}`}
                   className="block h-full rounded-2xl border border-mist bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-lilac-soft hover:shadow-md"
                 >
-                  <h3 className="pr-6 text-xl font-semibold text-ink group-hover:text-lilac">
+                  <h3 className="pr-6 text-[15px] font-semibold text-ink group-hover:text-lilac">
                     {s.title || "Untitled story"}
                   </h3>
-                  <p className="mt-2 text-base leading-7 text-ink-dim">{snippet(s)}</p>
+                  {snippet(s) && (
+                    <p className="mt-2 text-[13px] leading-5 text-ink-dim">{snippet(s)}</p>
+                  )}
                   <footer className="mt-4 text-sm text-ink-dim">
                     Updated {formatUpdatedAt(s.updatedAt)}
                   </footer>
