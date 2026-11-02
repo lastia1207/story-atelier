@@ -65,7 +65,7 @@ Install these **before** you begin:
 
 > **Before you start:** throughout this guide, `[your-folder-path]` is a placeholder for the folder where the project lives on *your* machine (for example `C:\Projects` or `D:\My Documents`). Replace it with your own location. The **project folder** is the folder named `story-atelier` that directly contains the `package.json` file.
 
-**Option A — download with Git:**
+**Option A:**
 
 ```powershell
 cd "[your-folder-path]"
@@ -73,7 +73,7 @@ git clone <your-repository-url> story-atelier
 cd story-atelier
 ```
 
-**Option B — the project folder already exists:** navigate into the project folder and verify you're in the right place:
+**Option B:** navigate into the project folder and verify you're in the right place:
 
 ```powershell
 cd "[your-folder-path]\story-atelier"
@@ -82,7 +82,7 @@ Get-ChildItem package.json   # lists the file when you're in the correct folder
 
 Note: `cd` only changes the terminal's location — it does **not** start the app or open anything. To actually reach the **writing area**, continue with Steps 2–4 below (install → run → open the browser), then create or open a story. The writing area is a screen inside the app, not a folder on disk.
 
-**Option C — for absolute beginners (no coding experience):**
+**Option C:**
 
 1. **Install Node.js.** Go to https://nodejs.org, download the **LTS** version for Windows, run the installer, and accept all defaults. Restart your computer if the installer asks.
 2. **Find the project folder** in File Explorer — it is the `story-atelier` folder that contains a file named `package.json`.
@@ -357,7 +357,7 @@ Edit any `color` value and repaint an area to see it (or generate a new map).
 
 # Tiếng Việt
 
-## 1. Tổng quan dự án
+## 1. Tổng quan 
 
 **Story Atelier** là một không gian viết truyện yên tĩnh với tông màu pastel, dành cho tác giả tiểu thuyết. Ứng dụng hội tụ mọi thứ bạn cần để lên kế hoạch và viết một câu chuyện trong cùng một nơi:
 
@@ -378,7 +378,7 @@ Edit any `color` value and repaint an area to see it (or generate a new map).
 - [TypeScript](https://www.typescriptlang.org) 5
 - **Không cần backend** — toàn bộ dữ liệu truyện được lưu tự động trong `localStorage` của trình duyệt. Không có gì rời khỏi máy của bạn.
 
-## 2. Yêu cầu hệ thống (Prerequisites)
+## 2. Yêu cầu 
 
 Cài đặt những thứ sau **trước khi** bắt đầu:
 
@@ -397,13 +397,13 @@ Cài đặt những thứ sau **trước khi** bắt đầu:
 
 > **Lưu ý trên Windows:** PowerShell đôi khi yêu cầu dùng `npm.cmd` thay vì `npm`. Hai lệnh làm cùng một việc; nếu `npm` thường báo lỗi, hãy dùng `npm.cmd`.
 
-## 3. Các bước cài đặt (Installation)
+## 3. Cài đặt (Installation)
 
 **Bước 1 — Đưa dự án về máy**
 
 > **Trước khi bắt đầu:** trong toàn bộ hướng dẫn, `[your-folder-path]` là chỗ giữ chỗ cho thư mục chứa dự án trên máy *của bạn* (ví dụ `C:\Projects` hoặc `D:\My Documents`). Hãy thay bằng vị trí thật của bạn. **Thư mục dự án** là thư mục tên `story-atelier` chứa trực tiếp tệp `package.json`.
 
-**Cách A — tải bằng Git:**
+**Cách A:**
 
 ```powershell
 cd "[your-folder-path]"
@@ -411,7 +411,7 @@ git clone <url-repository-cua-ban> story-atelier
 cd story-atelier
 ```
 
-**Cách B — thư mục dự án đã có sẵn:** di chuyển vào thư mục dự án và kiểm tra đúng vị trí:
+**Cách B:** di chuyển vào thư mục dự án và kiểm tra đúng vị trí:
 
 ```powershell
 cd "[your-folder-path]\story-atelier"
@@ -420,7 +420,7 @@ Get-ChildItem package.json   # hiển thị tệp nghĩa là bạn đang ở đ�
 
 Lưu ý: lệnh `cd` chỉ đổi vị trí của terminal — nó **không** khởi động ứng dụng và không mở gì cả. Để thực sự vào **writing area**, hãy tiếp tục Bước 2–4 bên dưới (cài đặt → chạy → mở trình duyệt), rồi tạo hoặc mở một truyện. Writing area là một màn hình bên trong ứng dụng, không phải một thư mục trên ổ đĩa.
 
-**Cách C — dành cho người hoàn toàn mới (chưa từng viết code):**
+**Cách C:**
 
 1. **Cài Node.js.** Vào https://nodejs.org, tải bản **LTS** cho Windows, chạy trình cài đặt và giữ nguyên mọi lựa chọn mặc định. Khởi động lại máy nếu trình cài đặt yêu cầu.
 2. **Tìm thư mục dự án** trong File Explorer — đó là thư mục `story-atelier` chứa tệp tên `package.json`.
