@@ -1,6 +1,6 @@
 # Story Atelier
 
-A calm, pastel-themed writing workspace — chapters, a hierarchical outline, an interactive timeline, a character database, and a world map — built with [Next.js](https://nextjs.org) (App Router), [TipTap](https://tiptap.dev), and [Tailwind CSS v4](https://tailwindcss.com).
+A calm, pastel-themed writing workspace, a hierarchical outline, an interactive timeline, a character database, and a world map — built with [Next.js](https://nextjs.org) (App Router), [TipTap](https://tiptap.dev), and [Tailwind CSS v4](https://tailwindcss.com).
 
 **Languages / Ngôn ngữ:** [English](#english) | [Tiếng Việt](#tiếng-việt)
 
@@ -61,7 +61,7 @@ Install these **before** you begin:
 
 ## 4. Installation
 
-**Step 1 — Get the project**
+**Step 1 — get the project**
 
 > **Before you start:** throughout this guide, `[your-folder-path]` is a placeholder for the folder where the project lives on *your* machine (e.g. `C:\Projects` or `D:\My Documents`). Replace it with your own location. The **project folder** is the folder named `story-atelier` that directly contains the `package.json` file.
 
@@ -80,18 +80,18 @@ cd "[your-folder-path]\story-atelier"
 Get-ChildItem package.json   # lists the file when you're in the correct folder
 ```
 
-**Option C: more details**
+**Option C - more details:**
 
 1. **Install Node.js.** Go to https://nodejs.org, download the **LTS** version for Windows, run the installer, and accept all defaults. Restart your computer if the installer asks.
 2. **Find the project folder** in File Explorer — it is the `story-atelier` folder that contains a file named `package.json`.
-3. **Open a terminal inside that folder.** Click inside the folder, click the address bar at the top of File Explorer, type `powershell`, and press `Enter`. A PowerShell window opens already located in the project folder. (On Windows 11 you can also right-click an empty spot in the folder and choose *Open in Terminal*.)
+3. **Open a terminal inside that folder.** Click inside the folder, click the address bar at the top of File Explorer, type `powershell`, and press `Enter`. A PowerShell window opens already located in the project folder. (You can also right-click an empty spot in the folder and choose *Open in Terminal*.)
 4. **Confirm you're in the right place:** type `Get-ChildItem package.json` and press `Enter`. If a file is listed, you're set; if you see an error, go back to step 2.
 5. **Install the app's parts:** type `npm install` and press `Enter`. Wait 1–3 minutes until the blinking cursor returns. If `npm` reports *"not recognized"*, use `npm.cmd install` instead.
 6. **Start the app:** type `npm.cmd run dev` and press `Enter`. Wait until you see `✓ Ready`.
 7. **Open the app:** in your browser, go to `http://localhost:3000`. Click **+ New story**, give it a title, and open it — you are now in the writing area.
 8. **When you're done:** press `Ctrl + C` in the PowerShell window to stop the app. You can close the browser tab at any time — your work is saved automatically.
 
-**Step 2 — Install dependencies**
+**Step 2 — install dependencies**
 
 ```powershell
 npm install
@@ -99,7 +99,7 @@ npm install
 
 This downloads all packages listed in `package.json` (Next.js, React, TipTap, Tailwind, …) into the `node_modules` folder. Expect it to take 1–3 minutes depending on your internet speed.
 
-**Step 3 — Start**
+**Step 3 — run!!**
 
 ```powershell
 cd "[your-folder-path]"
@@ -114,11 +114,11 @@ Successful output looks like:
 ✓ Ready in 2.1s
 ```
 
-**Step 4 — Open**
+**Step 4 — open**
 
 Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the Story Atelier home page.
 
-**Step 5 — Stop the server**
+**Step 5 — stop the server**
 
 Click on the PowerShell window and press `Ctrl + C` or `exit`.
 
@@ -359,7 +359,7 @@ Edit any `color` value and repaint an area to see it (or generate a new map).
 
 ## 1. Tổng quan 
 
-**Story Atelier** là một không gian viết truyện yên tĩnh với tông màu pastel, dành cho tác giả tiểu thuyết. Ứng dụng hội tụ mọi thứ bạn cần để lên kế hoạch và viết một câu chuyện trong cùng một nơi:
+**Story Atelier** là một không gian viết truyện yên tĩnh với tông màu pastel, dành cho tác giả tiểu thuyết. Hội tụ mọi thứ bạn cần để lên kế hoạch và viết một câu chuyện trong cùng một nơi:
 
 | Tính năng | Mô tả |
 |---|---|
@@ -376,7 +376,7 @@ Edit any `color` value and repaint an area to see it (or generate a new map).
 - [TipTap](https://tiptap.dev) 3 — trình soạn thảo định dạng của bản thảo
 - [Tailwind CSS](https://tailwindcss.com) v4 — toàn bộ giao diện, điều khiển bằng design token
 - [TypeScript](https://www.typescriptlang.org) 5
-- **Không cần backend** — toàn bộ dữ liệu truyện được lưu tự động trong `localStorage` của trình duyệt. Không có gì rời khỏi máy của bạn.
+- **Không cần backend** — toàn bộ dữ liệu truyện được lưu tự động trong `localStorage` của trình duyệt. Không có gì tan biến khỏi máy của bạn.
 
 ## 2. Yêu cầu 
 
@@ -399,11 +399,11 @@ Cài đặt những thứ sau **trước khi** bắt đầu:
 
 ## 3. Cài đặt (Installation)
 
-**Bước 1 — Đưa dự án về máy**
+**Bước 1 — đưa dự án về máy**
 
-> **Trước khi bắt đầu:** trong toàn bộ hướng dẫn, `[your-folder-path]` là chỗ giữ chỗ cho thư mục chứa dự án trên máy *của bạn* (ví dụ `C:\Projects` hoặc `D:\My Documents`). Hãy thay bằng vị trí thật của bạn. **Thư mục dự án** là thư mục tên `story-atelier` chứa trực tiếp tệp `package.json`.
+> **Trước khi bắt đầu:** trong toàn bộ hướng dẫn, `[your-folder-path]` là chỗ giữ chỗ cho thư mục chứa dự án trên máy *của bạn* (ví dụ `C:\Projects` hoặc `D:\My Documents`). Hãy thay bằng vị trí thật của bạn. **Project folder** là folder tên `story-atelier` chứa file `package.json`.
 
-**Cách A:**
+**Option A:**
 
 ```powershell
 cd "[your-folder-path]"
@@ -411,7 +411,7 @@ git clone <url-repository-cua-ban> story-atelier
 cd story-atelier
 ```
 
-**Cách B:** di chuyển vào thư mục dự án và kiểm tra đúng vị trí:
+**Option B:** 
 
 ```powershell
 cd "[your-folder-path]\story-atelier"
@@ -420,18 +420,18 @@ Get-ChildItem package.json   # hiển thị tệp nghĩa là bạn đang ở đ�
 
 Lưu ý: lệnh `cd` chỉ đổi vị trí của terminal — nó **không** khởi động ứng dụng và không mở gì cả. Để thực sự vào **writing area**, hãy tiếp tục Bước 2–4 bên dưới (cài đặt → chạy → mở trình duyệt), rồi tạo hoặc mở một truyện. Writing area là một màn hình bên trong ứng dụng, không phải một thư mục trên ổ đĩa.
 
-**Cách C:**
+**Option C - chi tiết:**
 
-1. **Cài Node.js.** Vào https://nodejs.org, tải bản **LTS** cho Windows, chạy trình cài đặt và giữ nguyên mọi lựa chọn mặc định. Khởi động lại máy nếu trình cài đặt yêu cầu.
-2. **Tìm thư mục dự án** trong File Explorer — đó là thư mục `story-atelier` chứa tệp tên `package.json`.
-3. **Mở terminal ngay trong thư mục đó.** Nhấp vào bên trong thư mục, nhấp vào thanh địa chỉ phía trên của File Explorer, gõ `powershell` rồi nhấn `Enter`. Cửa sổ PowerShell sẽ mở ra đã sẵn ở đúng thư mục dự án. (Trên Windows 11 bạn cũng có thể nhấp chuột phải vào chỗ trống trong thư mục và chọn *Open in Terminal*.)
+1. **Cài Node.js.** Vào https://nodejs.org, tải bản **LTS** cho Windows, chạy trình cài đặt và giữ nguyên mọi lựa chọn mặc định. Khởi động lại máy nếu yêu cầu.
+2. **Tìm project folder** trong File Explorer — folder `story-atelier` chứa file tên `package.json`.
+3. **Mở terminal ngay trong thư mục đó.** Nhấp vào bên trong thư mục, nhấp vào thanh địa chỉ phía trên của File Explorer, gõ `powershell` rồi nhấn `Enter`. Cửa sổ PowerShell sẽ mở ra đã sẵn ở đúng thư mục dự án. (Bạn có thể nhấp chuột phải vào chỗ trống trong thư mục và chọn *Open in Terminal*.)
 4. **Xác nhận đúng vị trí:** gõ `Get-ChildItem package.json` rồi nhấn `Enter`. Nếu thấy tệp được liệt kê thì bạn đã sẵn sàng; nếu báo lỗi, quay lại bước 2.
 5. **Cài các thành phần của ứng dụng:** gõ `npm install` rồi nhấn `Enter`. Chờ 1–3 phút đến khi con trỏ nhấp nháy quay lại. Nếu `npm` báo *"not recognized"*, hãy dùng `npm.cmd install` thay thế.
 6. **Khởi động ứng dụng:** gõ `npm.cmd run dev` rồi nhấn `Enter`. Chờ đến khi thấy dòng `✓ Ready`.
 7. **Mở ứng dụng:** trong trình duyệt, vào `http://localhost:3000`. Nhấn **+ New story**, đặt tiêu đề và mở ra — bạn đã ở trong writing area.
 8. **Khi dùng xong:** nhấn `Ctrl + C` trong cửa sổ PowerShell để dừng ứng dụng. Bạn có thể đóng tab trình duyệt bất cứ lúc nào — dữ liệu được lưu tự động.
 
-**Bước 2 — Cài đặt các thư viện phụ thuộc**
+**Bước 2 — cài đặt những thứ liên quan**
 
 ```powershell
 npm install
@@ -439,7 +439,7 @@ npm install
 
 Lệnh này tải tất cả gói trong `package.json` (Next.js, React, TipTap, Tailwind, …) vào thư mục `node_modules`. Thời gian khoảng 1–3 phút tùy tốc độ mạng.
 
-**Bước 3 — Chạy máy chủ phát triển (dev server)**
+**Bước 3 — chạy!!**
 
 ```powershell
 npm.cmd run dev
@@ -453,7 +453,7 @@ Kết quả thành công trông như sau:
 ✓ Ready in 2.1s
 ```
 
-**Bước 4 — Mở ứng dụng**
+**Bước 4 — mở ứng dụng**
 
 Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt. Bạn sẽ thấy trang chủ Story Atelier.
 
@@ -461,7 +461,7 @@ Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt. Bạn 
 
 Nhấp vào cửa sổ PowerShell rồi nhấn `Ctrl + C`.
 
-## 4. Hướng dẫn sử dụng (Usage)
+## 4. Hướng dẫn sử dụng 
 
 ### 4.1 Chế độ phát triển (viết hằng ngày)
 
@@ -471,7 +471,7 @@ npm.cmd run dev
 
 Sau đó mở [http://localhost:3000](http://localhost:3000). Mọi tệp bạn lưu đều được tải lại tức thì trong trình duyệt.
 
-### 4.2 Sử dụng không gian làm việc
+### 4.2 Hướng dẫn sử dụng
 
 1. Từ trang chủ, nhấn **+ New story** (đặt tiêu đề).
 2. Mở truyện để vào **workspace** gồm ba khung:
@@ -493,15 +493,13 @@ npm run start     # phục vụ tại http://localhost:3000
 
 Chạy `build` trước rồi mới `start`. Dùng chế độ sản xuất khi muốn kiểm tra hiệu năng thực tế nhanh nhất.
 
-### 4.4 Kiểm tra lỗi phong cách code (lint)
+### 4.4 Linting
 
 ```powershell
 npm run lint      # chạy ESLint (eslint-config-next)
 ```
 
-Hãy sửa hết lỗi được báo trước khi commit thay đổi.
-
-### 4.5 Triển khai (Deploy)
+### 4.5 Deployment
 
 Cách dễ nhất là dùng nền tảng [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme). Đưa repository lên GitHub, nhập dự án tại vercel.com, Vercel tự nhận diện Next.js. Xem [tài liệu triển khai](https://nextjs.org/docs/app/building-your-application/deploying) để biết chi tiết. Lưu ý: dữ liệu truyện nằm trong trình duyệt của từng người dùng nên không cần di chuyển dữ liệu phía máy chủ.
 
@@ -518,7 +516,7 @@ Cách dễ nhất là dùng nền tảng [Vercel](https://vercel.com/new?utm_med
 | Cỡ chữ toàn cục | `app/globals.css` | `html { font-size: ... }` |
 | Cỡ chữ trình soạn thảo + danh sách chọn | `components/rich-editor.tsx` | `text-[24px]`, `FONT_SIZES` |
 | Màu sắc (nền, chữ, điểm nhấn) | `app/globals.css` | biến `:root` + `@theme inline` |
-| Màu địa hình bản đồ | `lib/story-store.ts` | đối tượng `TERRAINS` |
+| Màu địa hình bản đồ | `lib/story-store.ts` | địa hình `TERRAINS` |
 | Độ rộng các khung | `app/workspace/[id]/workspace.tsx`, `components/map-view.tsx` | thanh chia kéo được + trạng thái `layout` (lưu trong `localStorage`, khóa `story-atelier:layout:v1`) / `w-*` |
 
 ### 5.2 Quy tắc hai font
