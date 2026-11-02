@@ -69,7 +69,7 @@ Install these **before** you begin:
 
 ```powershell
 cd "[your-folder-path]"
-git clone [https://github.com/nhi120-7/story-atelier.git](https://github.com/nhi120-7/story-atelier.git) story-atelier
+git clone https://github.com/nhi120-7/story-atelier.git story-atelier
 cd story-atelier
 ```
 
