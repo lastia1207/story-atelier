@@ -321,7 +321,7 @@ export function Workspace({ id }: { id: string }) {
             style={{ width: layout.right }}
             className="flex min-h-0 shrink-0 flex-col overflow-hidden border-l border-mist"
           >
-            <div className="min-h-0 overflow-auto border-b border-mist">
+            <div className="min-h-0 flex-1 overflow-auto border-b border-mist">
               <TimelinePanel storyId={id} selectedNodeId={selectedNodeId} />
             </div>
             <div className="min-h-0 flex-1 overflow-hidden">
