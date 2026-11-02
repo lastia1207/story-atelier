@@ -185,16 +185,16 @@ The app needs **no environment variables, database, or API keys**. All configura
 
 ### 6.2 The two-font rule (read this first)
 
-The app deliberately uses **two fonts**:
+The girl who made this thing like to uses **two fonts**:
 
 1. **Interface font** — currently *Agbalumo* (the file `app/fonts/Agbalumo-Regular.ttf`). It is applied to every menu, button, label, and panel through the CSS variable `--font-brunette`.
 2. **Writing-area font** — **Times New Roman**, applied to everything inside the manuscript (the TipTap editor body and the chapter title) through the `.font-story` class.
 
 Keep this separation while customizing: change #1 freely, and leave `.font-story` alone unless you intend to reformat the manuscript itself.
 
-### 6.3 Change the interface font family
+If someone want to make changes, she will not assume any reponsibility.
 
-**Step-by-step:**
+### 6.3 Change the interface font family
 
 1. **Add the font file** — copy your `.ttf`, `.otf`, or `.woff2` file into `app/fonts/`.
 2. **Point the loader at it** — open `app/layout.tsx` and edit the `localFont` block:
@@ -457,7 +457,7 @@ Kết quả thành công trông như sau:
 
 Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt. Bạn sẽ thấy trang chủ Story Atelier.
 
-**Bước 5 — Dừng máy chủ**
+**Bước 5 — dừng server**
 
 Nhấp vào cửa sổ PowerShell rồi nhấn `Ctrl + C`.
 
@@ -484,30 +484,11 @@ Sau đó mở [http://localhost:3000](http://localhost:3000). Mọi tệp bạn 
 3. **Mọi thứ được lưu tự động** vào `localStorage` của trình duyệt — không có nút Lưu và không có máy chủ. Đóng tab không làm mất dữ liệu.
 4. Để **sao lưu hoặc chuyển** dữ liệu: mở DevTools (F12) → *Application* → *Local Storage* → `http://localhost:3000` → sao chép giá trị của mục `story-atelier`. Để khôi phục, dán lại trên máy/trình duyệt khác.
 
-### 4.3 Build cho môi trường sản xuất
-
-```powershell
-npm run build     # biên dịch bản tối ưu cho sản xuất
-npm run start     # phục vụ tại http://localhost:3000
-```
-
-Chạy `build` trước rồi mới `start`. Dùng chế độ sản xuất khi muốn kiểm tra hiệu năng thực tế nhanh nhất.
-
-### 4.4 Linting
-
-```powershell
-npm run lint      # chạy ESLint (eslint-config-next)
-```
-
-### 4.5 Deployment
-
-Cách dễ nhất là dùng nền tảng [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme). Đưa repository lên GitHub, nhập dự án tại vercel.com, Vercel tự nhận diện Next.js. Xem [tài liệu triển khai](https://nextjs.org/docs/app/building-your-application/deploying) để biết chi tiết. Lưu ý: dữ liệu truyện nằm trong trình duyệt của từng người dùng nên không cần di chuyển dữ liệu phía máy chủ.
-
 ## 5. Cấu hình & Tùy biến thiết kế (Configuration & Design Customization)
 
 Ứng dụng **không cần biến môi trường, cơ sở dữ liệu hay khóa API**. Mọi cấu hình đều nằm trong mã nguồn dưới dạng **design token** — sửa giá trị, lưu lại, ứng dụng đang chạy cập nhật ngay (hot reload). Phần này hướng dẫn từng bước cách đổi font, cỡ chữ và màu sắc — người mới đi theo các bước đánh số, người có kinh nghiệm dùng bảng và ghi chú nâng cao.
 
-### 5.1 Vị trí từng thiết lập
+### 5.1 Thiết lập
 
 | Muốn thay đổi | Tệp | Vị trí trong tệp |
 |---|---|---|
@@ -519,12 +500,14 @@ Cách dễ nhất là dùng nền tảng [Vercel](https://vercel.com/new?utm_med
 | Màu địa hình bản đồ | `lib/story-store.ts` | địa hình `TERRAINS` |
 | Độ rộng các khung | `app/workspace/[id]/workspace.tsx`, `components/map-view.tsx` | thanh chia kéo được + trạng thái `layout` (lưu trong `localStorage`, khóa `story-atelier:layout:v1`) / `w-*` |
 
-### 5.2 Quy tắc hai font
+### 5.2 Quy tắc 
 
-Ứng dụng cố ý dùng hai font — hãy giữ nguyên sự tách biệt này khi tùy biến:
+Con nhỏ tạo ra cái này thích sử dụng hai font:
 
 1. **Font giao diện** — *Agbalumo* (`app/fonts/Agbalumo-Regular.ttf`), áp dụng cho mọi menu, nút, nhãn qua biến CSS `--font-brunette`.
-2. **Font writing area** — **Times New Roman**, áp dụng cho bản thảo qua lớp `.font-story`. Đừng đổi trừ khi bạn muốn định dạng lại toàn bộ bản thảo.
+2. **Font writing area** — **Times New Roman**, áp dụng cố định để sáng tác trong `.font-story`. Đừng đổi trừ khi bạn muốn định dạng lại toàn bộ bản thảo.
+
+Nếu ai đó muốn đổi font, nó sẽ không chịu bất cứ trách nhiệm nào.
 
 **Đổi font giao diện:**
 
@@ -558,7 +541,7 @@ Cách dễ nhất là dùng nền tảng [Vercel](https://vercel.com/new?utm_med
 
 ### 5.3 Đổi font của writing area
 
-Bản thảo cố ý dùng **Times New Roman** (đề mục chương và phần thân). Để dùng font serif khác, sửa quy tắc `.font-story` trong `app/globals.css`:
+Bản thảo cố định dùng **Times New Roman** (Chapter và phần thân). Muốn đổi sang font serif khác, sửa quy tắc `.font-story` trong `app/globals.css`:
 
 ```css
 .font-story {
@@ -566,7 +549,7 @@ Bản thảo cố ý dùng **Times New Roman** (đề mục chương và phần 
 }
 ```
 
-Lớp này áp dụng cho cả hai trình soạn thảo bản thảo (Chapters và ghi chú Outline) lẫn tiêu đề chương, nên một thay đổi phủ toàn bộ writing area.
+Lớp này áp dụng cho cả Chapters và Outline lẫn tiêu đề chương, nên một thay đổi phủ toàn bộ writing area.
 
 ### 5.4 Đổi màu
 
@@ -626,7 +609,7 @@ Màu địa hình bản đồ nằm riêng trong `lib/story-store.ts` (`TERRAINS
 2. Nếu thay đổi **font** không hiện ra, làm mới cứng trình duyệt (`Ctrl+Shift+R`); font bị lưu đệm rất mạnh.
 3. DevTools (F12) → **Elements** → chọn phần tử → khung **Computed** sẽ hiển thị đúng `font-family`, `font-size`, và `color` đang được áp dụng.
 
-## 6. Xử lý sự cố (Troubleshooting)
+## 6. Xử lý sự cố 
 
 | Vấn đề | Nguyên nhân | Cách khắc phục |
 |---|---|---|
