@@ -407,7 +407,7 @@ Cài đặt những thứ sau **trước khi** bắt đầu:
 
 ```powershell
 cd "[your-folder-path]"
-git clone <url-repository-cua-ban> story-atelier
+git clone https://github.com/lastia1207/story-atelier.git story-atelier
 cd story-atelier
 ```
 
