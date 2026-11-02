@@ -8,7 +8,7 @@ A calm, pastel-themed writing workspace — chapters, a hierarchical outline, an
 
 # English
 
-## 1. Project Overview
+## 1. Overview
 
 **Story Atelier** gives fiction authors everything they need to plan and draft a story in one place:
 
@@ -51,7 +51,7 @@ Install these **before** you begin:
 | Git | Optional — only needed to clone the repository | `git --version` | https://git-scm.com |
 | A modern browser | Chrome, Edge, or Firefox, recent version | — | — |
 
-**Step-by-step: verify your tools**
+**Verify your tools**
 
 1. Press `Win + R`, type `powershell`, press `Enter`.
 2. Type `node -v` and press `Enter`. You should see something like `v22.14.0`. If you see *"not recognized"*, install Node.js from the link above and **restart PowerShell** afterward.
@@ -59,30 +59,28 @@ Install these **before** you begin:
 
 > **Windows note:** PowerShell sometimes requires `npm.cmd` instead of `npm`. Both commands do the same thing; if plain `npm` fails, use `npm.cmd`.
 
-## 4. Installation Steps
+## 4. Installation
 
-**Step 1 — Get the project onto your machine**
+**Step 1 — Get the project**
 
-> **Before you start:** throughout this guide, `[your-folder-path]` is a placeholder for the folder where the project lives on *your* machine (for example `C:\Projects` or `D:\My Documents`). Replace it with your own location. The **project folder** is the folder named `story-atelier` that directly contains the `package.json` file.
+> **Before you start:** throughout this guide, `[your-folder-path]` is a placeholder for the folder where the project lives on *your* machine (e.g. `C:\Projects` or `D:\My Documents`). Replace it with your own location. The **project folder** is the folder named `story-atelier` that directly contains the `package.json` file.
 
-**Option A:**
+**Option A - download with Git:**
 
 ```powershell
 cd "[your-folder-path]"
-git clone <your-repository-url> story-atelier
+git clone [<your-repository-url>](https://github.com/nhi120-7/story-atelier.git) story-atelier
 cd story-atelier
 ```
 
-**Option B:** navigate into the project folder and verify you're in the right place:
+**Option B - the project aldready exists:**
 
 ```powershell
 cd "[your-folder-path]\story-atelier"
 Get-ChildItem package.json   # lists the file when you're in the correct folder
 ```
 
-Note: `cd` only changes the terminal's location — it does **not** start the app or open anything. To actually reach the **writing area**, continue with Steps 2–4 below (install → run → open the browser), then create or open a story. The writing area is a screen inside the app, not a folder on disk.
-
-**Option C:**
+**Option C: more details**
 
 1. **Install Node.js.** Go to https://nodejs.org, download the **LTS** version for Windows, run the installer, and accept all defaults. Restart your computer if the installer asks.
 2. **Find the project folder** in File Explorer — it is the `story-atelier` folder that contains a file named `package.json`.
@@ -101,9 +99,10 @@ npm install
 
 This downloads all packages listed in `package.json` (Next.js, React, TipTap, Tailwind, …) into the `node_modules` folder. Expect it to take 1–3 minutes depending on your internet speed.
 
-**Step 3 — Start the development server**
+**Step 3 — Start**
 
 ```powershell
+cd "[your-folder-path]"
 npm.cmd run dev
 ```
 
@@ -115,19 +114,20 @@ Successful output looks like:
 ✓ Ready in 2.1s
 ```
 
-**Step 4 — Open the app**
+**Step 4 — Open**
 
 Open [http://localhost:3000](http://localhost:3000) in your browser. You should see the Story Atelier home page.
 
 **Step 5 — Stop the server**
 
-Click on the PowerShell window and press `Ctrl + C`.
+Click on the PowerShell window and press `Ctrl + C` or `exit`.
 
 ## 5. Usage Instructions
 
 ### 5.1 Development mode (daily writing)
 
 ```powershell
+cd "[your-folder-path]"
 npm.cmd run dev
 ```
 
